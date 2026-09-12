@@ -70,7 +70,7 @@ public class MobilListrik {
 
     public void tampilkanData() {
 
-        System.out.println("\n======================================");
+        System.out.println("======================================");
         System.out.println("       DATA RENTAL MOBIL LISTRIK");
         System.out.println("======================================");
         System.out.println("Nama Penyewa      : " + namaPenyewa);
@@ -80,5 +80,8 @@ public class MobilListrik {
         System.out.println("Lama Sewa         : " + lamaSewa + " Hari");
         System.out.println("Kapasitas Baterai : " + kapasitasBaterai + " kWh");
         System.out.println("Total Biaya       : Rp " + hitungTotal());
+        System.out.println("======================================================");
+        System.out.println("       TERIMA KASIH SUDAH MERENTAL MOBIL KAMI");
+        System.out.println("======================================================");
     }
 }

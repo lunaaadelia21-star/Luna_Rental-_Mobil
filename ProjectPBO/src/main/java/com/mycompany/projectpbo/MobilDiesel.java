@@ -80,5 +80,8 @@ public class MobilDiesel {
         System.out.println("Lama Sewa      : " + lamaSewa + " Hari");
         System.out.println("Jumlah Solar   : " + jumlahSolar + " Liter");
         System.out.println("Total Biaya    : Rp " + hitungTotal());
+        System.out.println("======================================================");
+        System.out.println("        TERIMA KASIH SUDAH MERENTAL MOBIL KAMI");
+        System.out.println("======================================================");
     }
 }
