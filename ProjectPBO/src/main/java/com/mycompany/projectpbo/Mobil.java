@@ -47,6 +47,5 @@ public class Mobil {
     }
 
     void tampilkanData() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
