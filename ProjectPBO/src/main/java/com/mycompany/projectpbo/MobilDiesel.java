@@ -1,87 +1,48 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt
  */
 
 package com.mycompany.projectpbo;
 
-public class MobilDiesel {
+public class MobilDiesel extends Mobil {
 
-    private String namaPenyewa;
-    private String merkMobil;
-    private String platMobil;
-    private int tarifPerHari;
-    private int lamaSewa;
     private double jumlahSolar;
+    private int totalBayar;
 
-    public MobilDiesel() {
-    }
+    public MobilDiesel(String namaPenyewa, String merkMobil,
+            String platMobil, int tarifPerHari,
+            int lamaSewa, double jumlahSolar) {
 
-    public String getNamaPenyewa() {
-        return namaPenyewa;
-    }
+        super(namaPenyewa, merkMobil, platMobil, tarifPerHari, lamaSewa);
 
-    public String getMerkMobil() {
-        return merkMobil;
-    }
-
-    public String getPlatMobil() {
-        return platMobil;
-    }
-
-    public int getTarifPerHari() {
-        return tarifPerHari;
-    }
-
-    public int getLamaSewa() {
-        return lamaSewa;
+        this.jumlahSolar = jumlahSolar;
+        this.totalBayar = lamaSewa * tarifPerHari;
     }
 
     public double getJumlahSolar() {
         return jumlahSolar;
     }
 
-    public void setNamaPenyewa(String namaPenyewa) {
-        this.namaPenyewa = namaPenyewa;
-    }
-
-    public void setMerkMobil(String merkMobil) {
-        this.merkMobil = merkMobil;
-    }
-
-    public void setPlatMobil(String platMobil) {
-        this.platMobil = platMobil;
-    }
-
-    public void setTarifPerHari(int tarifPerHari) {
-        this.tarifPerHari = tarifPerHari;
-    }
-
-    public void setLamaSewa(int lamaSewa) {
-        this.lamaSewa = lamaSewa;
-    }
-
     public void setJumlahSolar(double jumlahSolar) {
         this.jumlahSolar = jumlahSolar;
     }
 
-    public int hitungTotal() {
-        return tarifPerHari * lamaSewa;
+    public int getTotalBayar() {
+        return totalBayar;
     }
 
-    public void tampilkanData() {
+    public void setTotalBayar(int totalBayar) {
+        this.totalBayar = totalBayar;
+    }
 
-        System.out.println("======================================");
-        System.out.println("        DATA RENTAL MOBIL DIESEL");
-        System.out.println("======================================");
-        System.out.println("Nama Penyewa   : " + namaPenyewa);
-        System.out.println("Merk Mobil     : " + merkMobil);
-        System.out.println("Plat Mobil     : " + platMobil);
-        System.out.println("Tarif Per Hari : Rp " + tarifPerHari);
-        System.out.println("Lama Sewa      : " + lamaSewa + " Hari");
-        System.out.println("Jumlah Solar   : " + jumlahSolar + " Liter");
-        System.out.println("Total Biaya    : Rp " + hitungTotal());
-        System.out.println("======================================================");
-        System.out.println("        TERIMA KASIH SUDAH MERENTAL MOBIL KAMI");
-        System.out.println("======================================================");
+    public void tampilkanSolar() {
+        System.out.println("Jumlah Solar : " + jumlahSolar + " liter");
+    }
+
+    @Override
+    public void tampilkanData() {
+        super.tampilkanData();
+        tampilkanSolar();
+        System.out.println("Total Bayar : " + totalBayar);
     }
 }

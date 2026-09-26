@@ -4,84 +4,33 @@
  */
 package com.mycompany.projectpbo;
 
-public class MobilListrik {
+public class MobilListrik extends Mobil {
 
-    private String namaPenyewa;
-    private String merkMobil;
-    private String platMobil;
-    private int tarifPerHari;
-    private int lamaSewa;
-    private double kapasitasBaterai;
+    private int kapasitasBaterai;
 
-    public MobilListrik() {
-    }
+    public MobilListrik(String namaPenyewa, String merkMobil,
+            String platMobil, int tarifPerHari, int lamaSewa,
+            int kapasitasBaterai) {
 
-    public String getNamaPenyewa() {
-        return namaPenyewa;
-    }
-
-    public String getMerkMobil() {
-        return merkMobil;
-    }
-
-    public String getPlatMobil() {
-        return platMobil;
-    }
-
-    public int getTarifPerHari() {
-        return tarifPerHari;
-    }
-
-    public int getLamaSewa() {
-        return lamaSewa;
-    }
-
-    public double getKapasitasBaterai() {
-        return kapasitasBaterai;
-    }
-
-    public void setNamaPenyewa(String namaPenyewa) {
-        this.namaPenyewa = namaPenyewa;
-    }
-
-    public void setMerkMobil(String merkMobil) {
-        this.merkMobil = merkMobil;
-    }
-
-    public void setPlatMobil(String platMobil) {
-        this.platMobil = platMobil;
-    }
-
-    public void setTarifPerHari(int tarifPerHari) {
-        this.tarifPerHari = tarifPerHari;
-    }
-
-    public void setLamaSewa(int lamaSewa) {
-        this.lamaSewa = lamaSewa;
-    }
-
-    public void setKapasitasBaterai(float kapasitasBaterai) {
+        super(namaPenyewa, merkMobil, platMobil, tarifPerHari, lamaSewa);
         this.kapasitasBaterai = kapasitasBaterai;
     }
 
-    public int hitungTotal() {
-        return tarifPerHari * lamaSewa;
+    public int getKapasitasBaterai() {
+        return kapasitasBaterai;
     }
 
-    public void tampilkanData() {
+    public void setKapasitasBaterai(int kapasitasBaterai) {
+        this.kapasitasBaterai = kapasitasBaterai;
+    }
 
-        System.out.println("======================================");
-        System.out.println("       DATA RENTAL MOBIL LISTRIK");
-        System.out.println("======================================");
-        System.out.println("Nama Penyewa      : " + namaPenyewa);
-        System.out.println("Merk Mobil        : " + merkMobil);
-        System.out.println("Plat Mobil        : " + platMobil);
-        System.out.println("Tarif Per Hari    : Rp " + tarifPerHari);
-        System.out.println("Lama Sewa         : " + lamaSewa + " Hari");
+    public void tampilkanBaterai() {
         System.out.println("Kapasitas Baterai : " + kapasitasBaterai + " kWh");
-        System.out.println("Total Biaya       : Rp " + hitungTotal());
-        System.out.println("======================================================");
-        System.out.println("       TERIMA KASIH SUDAH MERENTAL MOBIL KAMI");
-        System.out.println("======================================================");
+    }
+
+    @Override
+    public void tampilkanData() {
+        super.tampilkanData();
+        tampilkanBaterai();
     }
 }
