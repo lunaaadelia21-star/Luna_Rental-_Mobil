@@ -6,31 +6,31 @@ package com.mycompany.projectpbo;
 
 public class MobilListrik extends Mobil {
 
-    private int kapasitasBaterai;
+    private int bateraiAwal;
 
     public MobilListrik(String namaPenyewa, String merkMobil,
             String platMobil, int tarifPerHari, int lamaSewa,
             int kapasitasBaterai) {
 
         super(namaPenyewa, merkMobil, platMobil, tarifPerHari, lamaSewa);
-        this.kapasitasBaterai = kapasitasBaterai;
+        this.bateraiAwal = bateraiAwal;
     }
 
-    public int getKapasitasBaterai() {
-        return kapasitasBaterai;
+    public int getBateraiAwal() {
+        return bateraiAwal;
     }
 
-    public void setKapasitasBaterai(int kapasitasBaterai) {
-        this.kapasitasBaterai = kapasitasBaterai;
+    public void setBateraiAwal(int BateraiAwal) {
+        this.bateraiAwal = bateraiAwal;
     }
 
-    public void tampilkanBaterai() {
-        System.out.println("Kapasitas Baterai : " + kapasitasBaterai + " kWh");
+    public void tampilkanBateraiAwal() {
+        System.out.println("Kapasitas Baterai : " + bateraiAwal+ " kWh");
     }
 
     @Override
     public void tampilkanData() {
         super.tampilkanData();
-        tampilkanBaterai();
+        tampilkanBateraiAwal();
     }
 }

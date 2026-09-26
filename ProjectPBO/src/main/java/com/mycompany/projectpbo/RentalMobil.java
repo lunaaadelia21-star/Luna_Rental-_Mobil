@@ -44,7 +44,7 @@ public class RentalMobil {
 
         if (pilihan == 1) {
 
-            System.out.print("Kapasitas Baterai : ");
+            System.out.print("Baterai Awal : ");
             int kapasitasBaterai = input.nextInt();
 
             MobilListrik mobilListrik1 = new MobilListrik(

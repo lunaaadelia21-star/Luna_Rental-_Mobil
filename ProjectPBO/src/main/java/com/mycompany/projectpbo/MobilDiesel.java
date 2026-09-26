@@ -6,7 +6,7 @@ package com.mycompany.projectpbo;
 
 public class MobilDiesel extends Mobil {
 
-    private double jumlahSolar;
+    private double jumlahSolarAwal;
     private int totalBayar;
 
     public MobilDiesel(String namaPenyewa, String merkMobil,
@@ -15,16 +15,16 @@ public class MobilDiesel extends Mobil {
 
         super(namaPenyewa, merkMobil, platMobil, tarifPerHari, lamaSewa);
 
-        this.jumlahSolar = jumlahSolar;
+        this.jumlahSolarAwal = jumlahSolarAwal;
         this.totalBayar = lamaSewa * tarifPerHari;
     }
 
     public double getJumlahSolar() {
-        return jumlahSolar;
+        return jumlahSolarAwal;
     }
 
     public void setJumlahSolar(double jumlahSolar) {
-        this.jumlahSolar = jumlahSolar;
+        this.jumlahSolarAwal = jumlahSolarAwal;
     }
 
     public int getTotalBayar() {
@@ -36,7 +36,7 @@ public class MobilDiesel extends Mobil {
     }
 
     public void tampilkanSolar() {
-        System.out.println("Jumlah Solar : " + jumlahSolar + " liter");
+        System.out.println("Jumlah Solar : " + jumlahSolarAwal + " liter");
     }
 
     @Override
