@@ -14,16 +14,16 @@ public class Mobil {
     protected String merkMobil;
     protected String platMobil;
     protected int tarifPerHari;
-    protected int lamaSewa;
+    protected int lamaSewaMobil;
 
     public Mobil(String namaPenyewa, String merkMobil, String platMobil,
-                 int tarifPerHari, int lamaSewa) {
+                 int tarifPerHari, int lamaSewaMobil) {
 
         this.namaPenyewa = namaPenyewa;
         this.merkMobil = merkMobil;
         this.platMobil = platMobil;
         this.tarifPerHari = tarifPerHari;
-        this.lamaSewa = lamaSewa;
+        this.lamaSewaMobil = lamaSewaMobil;
     }
 
     public String getNamaPenyewa() {
@@ -43,7 +43,7 @@ public class Mobil {
     }
 
     public int getLamaSewa() {
-        return lamaSewa;
+        return lamaSewaMobil;
     }
 
     void tampilkanData() {

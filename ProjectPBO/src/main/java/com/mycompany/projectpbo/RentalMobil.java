@@ -39,12 +39,12 @@ public class RentalMobil {
         System.out.print("Tarif Per Hari : ");
         int tarifPerHari = input.nextInt();
 
-        System.out.print("Lama Sewa : ");
+        System.out.print("Lama Sewa Mobil : ");
         int lamaSewa = input.nextInt();
 
         if (pilihan == 1) {
 
-            System.out.print("Baterai Awal : ");
+            System.out.print("Kapasitas Baterai : ");
             int kapasitasBaterai = input.nextInt();
 
             MobilListrik mobilListrik1 = new MobilListrik(
